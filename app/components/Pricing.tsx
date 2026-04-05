@@ -110,9 +110,41 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      style={{ padding: 'var(--space-24) 0' }}
+      style={{
+        padding: 'var(--space-24) 0',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      <div className="container">
+      {/* Background image */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          zIndex: 0,
+        }}
+      >
+        <img
+          src="/prices-image.jpg"
+          alt=""
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+        />
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(180deg, rgba(12,10,8,0.92) 0%, rgba(12,10,8,0.85) 50%, rgba(12,10,8,0.92) 100%)',
+          }}
+        />
+      </div>
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
         <div
           ref={titleRef}

@@ -25,7 +25,7 @@ export default function Hero() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=1920&h=1080"
+          src="./hero-image.jpg"
           alt="Атлет выполняет современную кроссфит тренировку"
           style={{
             width: '100%',
@@ -84,7 +84,7 @@ export default function Hero() {
             <a href="#join" className="btn-primary" style={{ padding: '16px 40px' }}>
               Запишись бесплатно
             </a>
-            <a href="#how" className="btn-secondary" style={{ marginLeft: '0' }}>
+            <a href="#programs" className="btn-secondary" style={{ marginLeft: '0' }}>
               Узнать больше
             </a>
           </div>
@@ -114,7 +114,7 @@ export default function Hero() {
               ))}
             </div>
             <span style={{ fontSize: '14px', fontWeight: 500, color: 'var(--color-text-primary)' }}>
-              1 200+ дерзких атлетов
+              1 200+ атлетов
             </span>
           </div>
         </div>
@@ -122,7 +122,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <a
-        href="#trust"
+        href="#programs"
         className="animate-bounce"
         aria-label="Прокрутить вниз"
         style={{

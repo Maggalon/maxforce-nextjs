@@ -7,7 +7,8 @@ const navLinks = [
   { href: '#programs', label: 'Программы' },
   { href: '#schedule', label: 'Расписание' },
   { href: '#pricing', label: 'Цены' },
-  { href: '#reviews', label: 'Отзывы' },
+  { href: '#rules', label: 'Правила' },
+  { href: '#merch', label: 'Мерч' },
 ];
 
 export default function Navbar() {
