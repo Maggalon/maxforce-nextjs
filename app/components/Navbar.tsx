@@ -8,7 +8,8 @@ const navLinks = [
   { href: '#schedule', label: 'Расписание' },
   { href: '#pricing', label: 'Цены' },
   { href: '#rules', label: 'Правила' },
-  { href: '#merch', label: 'Мерч' },
+  { href: '/merch', label: 'Мерч' },
+  { href: '/outdoor', label: 'Outdoor' },
 ];
 
 export default function Navbar() {
@@ -31,11 +32,21 @@ export default function Navbar() {
     document.body.style.overflow = 'hidden';
   };
 
+  const isHomePage = () => window.location.pathname === '/';
+
   const handleNavClick = (href: string) => {
     closeMenu();
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('#')) {
+      if (isHomePage()) {
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        window.location.href = '/' + href;
+      }
+    } else {
+      window.location.href = href;
     }
   };
 
@@ -68,8 +79,15 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              if (isHomePage()) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                window.location.href = '/';
+              }
+            }}
             style={{
               display: 'flex',
               alignItems: 'center',

@@ -106,7 +106,8 @@ export default function Footer() {
                 { href: '#schedule', label: 'Расписание' },
                 { href: '#pricing', label: 'Цены' },
                 { href: '#rules', label: 'Правила' },
-                { href: '#merch', label: 'Мерч' },
+                { href: '/merch', label: 'Мерч' },
+                { href: '/outdoor', label: 'Outdoor' },
               ].map((link) => (
                 <a
                   key={link.href}
