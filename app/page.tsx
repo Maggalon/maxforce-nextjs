@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import MerchButton from './components/MerchButton';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollAnimateInit from './components/ScrollAnimateInit';
+import WeatherPopup from './components/WeatherPopup';
 
 export default function HomePage() {
   return (
@@ -28,6 +29,7 @@ export default function HomePage() {
       <Footer />
       <MerchButton />
       <WhatsAppButton />
+      <WeatherPopup />
     </>
   );
 }
