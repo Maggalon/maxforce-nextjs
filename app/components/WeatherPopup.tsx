@@ -114,7 +114,7 @@ export default function WeatherPopup() {
     const fetchWeather = async () => {
       try {
         const res = await fetch(
-          `https://api.openweathermap.org/data/2.5/weather?q=Vladivostok&units=metric&appid=e13a8a8ce4dbc22b9e3e58528bc197e9`
+          `https://api.openweathermap.org/data/2.5/weather?q=Vladivostok&units=metric&appid=${process.env.NEXT_PUBLIC_OPENWEATHERMAP_API_KEY}`
         );
         if (!res.ok) return;
         const data = await res.json();
